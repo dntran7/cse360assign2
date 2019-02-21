@@ -15,6 +15,7 @@ public class maintest {
 		n.subtract(5);
 		n.divide(0);
 		System.out.println(n.getTotal());
+		System.out.println(n.getHistory());
 	}
 	
 }

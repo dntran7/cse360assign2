@@ -17,13 +17,14 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
-	
+	private String historylog;
 	/**Constructor for Calculator class
 	 * Default
 	 * Description: Sets total to 0
 	*/
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		historylog = "0";
 	}
 	
 	/**Method getTotal()
@@ -42,6 +43,7 @@ public class Calculator {
 	*/
 	public void add (int value) {
 		total = total + value;
+		historylog = historylog + " + " + Integer.toString(value);
 	}
 	
 	/**Method subtract()
@@ -51,6 +53,7 @@ public class Calculator {
 	*/
 	public void subtract (int value) {
 		total = total - value;
+		historylog = historylog + " - " + Integer.toString(value);
 	}
 	
 	/**Method multiply()
@@ -60,6 +63,7 @@ public class Calculator {
 	*/
 	public void multiply (int value) {
 		total = total * value;
+		historylog = historylog + " * " + Integer.toString(value);
 	}
 	
 	/**Method divide()
@@ -78,14 +82,16 @@ public class Calculator {
 		{
 			total = (int)(total / value);
 		}
+		historylog = historylog + " / " + Integer.toString(value);
 	}
 	
 	/**Method add()
 	 * @param void
 	 * @return String variable
-	 * Description: returns history log of previous calculations
+	 * Description: returns historylog of previous calculations,
+	 * historylog is updated at the end of every method
 	*/
 	public String getHistory () {
-		return "";
+		return historylog;
 	}
 }
