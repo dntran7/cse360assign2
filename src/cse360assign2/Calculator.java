@@ -32,7 +32,7 @@ public class Calculator {
 	 * Description: returns total
 	*/
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**Method add()
@@ -41,7 +41,7 @@ public class Calculator {
 	 * Description: adds value to total
 	*/
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/**Method subtract()
@@ -50,7 +50,7 @@ public class Calculator {
 	 * Description: subtracts value from total
 	*/
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**Method multiply()
@@ -59,16 +59,25 @@ public class Calculator {
 	 * Description: multiplies value with total
 	*/
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**Method divide()
 	 * @param integer variable "value"
 	 * @return void
-	 * Description: divides total by value
+	 * Description: divides total by value, 
+	 * if value = 0 then
+	 * total will be set to 0
 	*/
 	public void divide (int value) {
-		
+		if (value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+			total = (int)(total / value);
+		}
 	}
 	
 	/**Method add()
